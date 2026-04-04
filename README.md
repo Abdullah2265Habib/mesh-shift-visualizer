@@ -1,5 +1,4 @@
 # Technical Report: Mesh Circular Shift Visualizer
-**Submitted by:** 23F-XXXX (Replace with actual ID)
 
 ## 1. Introduction
 In parallel computing environments containing numerous computing nodes, inter-node communication efficiency is critical. A circular **q-shift** is a fundamental permutation operation where each node `i` safely transfers its data to node `((i + q) mod p)`. 
