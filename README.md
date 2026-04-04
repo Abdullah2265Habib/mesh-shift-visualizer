@@ -72,14 +72,3 @@ Whenever `q` exceeds `sqrt(p)-1` and isn't approaching `p/2` directly, the 2D pl
 5. Process Execution (Gunicorn): `gunicorn app:app`
 6. Commit configurations. Deployment is ready in 2 minutes.
 
-## 6. Screenshots
-*(Placeholder - The student will take 3 screenshots capturing the Interface Initial State, Animation State, and the deployed Live URL, and paste it here before exporting to PDF).*
-
-1. **Initial View Panel:**
-   [Insert Screenshot]
-
-2. **Mid Stream Data Animation:**
-   [Insert Screenshot]
-
-3. **Status Panel showing Live App Deployment:**
-   [Insert Screenshot]
