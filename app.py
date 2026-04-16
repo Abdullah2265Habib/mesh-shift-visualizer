@@ -1,21 +1,22 @@
 from flask import Flask, send_from_directory
 import os
+import mimetypes
 
-app = Flask(__name__, static_folder='public', static_url_path='')
+mimetypes.add_type('application/javascript', '.js')
+
+app = Flask(__name__)
 
 @app.route('/')
 def serve_index():
     return send_from_directory('public', 'index.html')
 
+@app.route('/public/<path:path>')
+def serve_public(path):
+    return send_from_directory('public', path)
+
 @app.route('/src/<path:path>')
 def serve_src(path):
     return send_from_directory('src', path)
-
-@app.route('/<path:path>')
-def serve_static(path):
-    if os.path.exists(os.path.join('public', path)):
-        return send_from_directory('public', path)
-    return send_from_directory('public', 'index.html')
 
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))

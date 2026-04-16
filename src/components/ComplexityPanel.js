@@ -56,7 +56,7 @@ export class ComplexityPanel {
         document.getElementById('val-mesh-steps').innerText = stats.meshSteps;
 
         const maxSteps = Math.max(stats.ringSteps, stats.meshSteps, 1);
-        document.getElementById('bar-ring').style.width = \`\${(stats.ringSteps / maxSteps) * 100}%\`;
-        document.getElementById('bar-mesh').style.width = \`\${(stats.meshSteps / maxSteps) * 100}%\`;
+        document.getElementById('bar-ring').style.width = `${(stats.ringSteps / maxSteps) * 100}%`;
+        document.getElementById('bar-mesh').style.width = `${(stats.meshSteps / maxSteps) * 100}%`;
     }
 }

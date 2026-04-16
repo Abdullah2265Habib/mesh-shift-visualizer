@@ -17,7 +17,7 @@ body {
     font-family: 'Inter', sans-serif;
     background-color: var(--bg);
     color: var(--text-main);
-    min-height: 100vh; // Removed flex columns from body, let main wrap take it
+    min-height: 100vh; /* Removed flex columns from body, let main wrap take it */
 }
 .app-container {
     padding: 2rem;
@@ -46,6 +46,7 @@ header h1 {
     font-family: 'Outfit', sans-serif;
     background: linear-gradient(to right, var(--primary), var(--secondary));
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     text-shadow: 0 0 20px var(--primary-glow);
 }
