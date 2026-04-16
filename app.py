@@ -1,4 +1,4 @@
-from flask import Flask, send_from_directory, render_template_string
+from flask import Flask, send_from_directory
 import os
 
 app = Flask(__name__, static_folder='public', static_url_path='')
@@ -6,6 +6,10 @@ app = Flask(__name__, static_folder='public', static_url_path='')
 @app.route('/')
 def serve_index():
     return send_from_directory('public', 'index.html')
+
+@app.route('/src/<path:path>')
+def serve_src(path):
+    return send_from_directory('src', path)
 
 @app.route('/<path:path>')
 def serve_static(path):
